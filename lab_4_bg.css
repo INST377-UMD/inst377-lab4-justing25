@@ -1,0 +1,60 @@
+body{
+    background-color: lightblue;
+}
+
+header{
+    display: flex;
+    
+}
+
+.alert_me {
+    
+    text-align: center;
+    background-color: blue;
+    width: 50%;
+    float: left;
+    margin-top: auto;
+    border: 3px solid white;
+    padding: 10px; 
+    color:white;
+
+
+}
+
+#changeColor {
+
+    text-align: center;
+    width: 20%;
+    float: left;
+    margin-bottom: auto;
+    border: 3px solid white;
+    background-color: blue;
+    padding: 10px;
+
+}
+
+.text_test {
+    
+    text-align: center;
+    background-color: blue;
+    width: 50%;
+    float: left;
+    margin-top: auto;
+    border: 3px solid white;
+    padding: 10px; 
+    color:white;
+
+
+}
+
+#add_text {
+
+    text-align: center;
+    width: 20%;
+    float: left;
+    margin-bottom: auto;
+    border: 3px solid white;
+    background-color: blue;
+    padding: 10px;
+
+}

@@ -1,0 +1,110 @@
+<html>
+    <head>
+
+        <title>INST377 - Lab 4</title>
+        <link rel="stylesheet" href="lab_4_bg.css">
+
+
+    </head>
+
+    <body>
+        <header>
+        <h1 id="title_name">INST377 - Lab 4</h1>
+        <h2 id="demo"></h2>
+        </header>
+
+        <!--First row Section-->
+        <div class="first row">
+            <div class="alert_me">
+                <form name="contactForm" onsubmit="formValidation()">
+                    <label>Name:</label>
+                    <input type="text" id="name">
+                    <button>Alert Me!</button>
+
+                </form>
+                <script type="text/javascript">
+                    function formValidation() {
+                        if(document.contactForm.name.value === "") {
+                            alert('Enter a Name!!!');
+                            document.body.style.backgroundColor = 'red';
+                            return false;
+                        } 
+                        else{
+                            alert('Hi '+ document.getElementById("name").value +"!");
+                            return false;
+                        }
+                    }
+                </script>
+
+            </div>
+            <aside id="changeColor">
+
+                <button onclick="ChangeColor()">Change Color</button>
+
+                <script type="text/javascript">
+                    function ChangeColor() {
+                        if(document.body.style.backgroundColor == 'lightblue'){
+                            const t = document.body.style.backgroundColor = 'purple';
+                        } else {
+                            const t = document.body.style.backgroundColor = 'lightblue';
+                        }
+                    }
+                </script>
+                
+
+            </aside>
+
+        
+        </div>
+
+        <!--Second Row-->
+        <section class="second_row">
+            <section class="text_test">
+                <form name="text_Test" onsubmit="text_testing()">
+                    <label>Text tester:</label>
+                    <input type="text" id="text_T">
+                    <button>Validate Text</button>
+
+                </form>
+
+                <script type="text/javascript">
+                    function text_testing() {
+                        const validationRegex = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+                        if(validationRegex.test(document.text_Test.text_T.value)) {
+                            alert('How abou.... Nah  :(');
+                            return false;
+                        }
+                    }
+
+
+                </script>
+
+
+
+            </section>
+            <aside id="add_text">
+    
+                <button id="bttn1" onclick="myFunction()">Add Text</button>
+
+                <script>
+                    function myFunction() {
+                        var x = document.getElementById("bttn1").innerHTML;
+                        document.getElementById("demo").innerHTML = x;
+                        
+                    }
+                </script>
+
+
+            </aside>
+        </section>
+
+    </body>
+
+
+
+
+
+
+
+
+</html>
